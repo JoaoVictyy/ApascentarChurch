@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedidos de Oração - Apascentar Church</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./img/Apascentar.jpg" type="image/png" />
+</head>
+
+<body>
+
+
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="./img/Apascentar.jpg" alt="Apascentar Church Logo" class="logo">
+    </a>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="#" class="menu-toggle">QUEM SOMOS ▾</a>
+          <ul class="submenu">
+            <li><a href="#proposito" class="menu-item proposito-link">PROPÓSITO</a></li>
+            <li><a href="pastores.html">NOSSOS PASTORES</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu-toggle">FALE CONOSCO ▾</a>
+          <ul class="submenu">
+            <li><a href="#contato" class="menu-item contato-link">CONTATO</a></li>
+            <li><a href="pedidos.html">PEDIDOS DE ORAÇÃO</a></li>
+          </ul>
+        </li>
+        <li><a href="agenda.html" class="menu-item">AGENDA</a></li>
+        <li><a href="gc.html" class="menu-item">GRUPO DE CRESCIMENTO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pedido-oracao">
+    <h1>Pedidos de Oração</h1>
+    <p>Compartilhe seu pedido de oração. Estamos prontos para interceder por você.</p>
+
+    <form id="pedidoForm" action="https://formspree.io/f/xrbkpaad" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail (opcional)" />
+      <textarea name="message" placeholder="Escreva aqui seu pedido..." required></textarea>
+      <button type="submit">Enviar Pedido</button>
+    </form>
+
+    <div id="formMessage" style="margin-top: 20px; font-weight: bold;"></div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>Apascentar Church</h3>
+        <p>Conectando vidas ao amor de Deus. Venha participar dos nossos cultos!</p>
+      </div>
+      <div class="footer-section contato" id="contato">
+        <h3>Contato</h3>
+        <p>Email: tananã@apascentar.com</p>
+        <p>Telefone: (99) 99999-9999</p>
+        <p>Endereço: Avenida São João, 976 - Londrina, PR</p>
+      </div>
+      <div class="footer-section redes">
+        <h3>Siga-nos</h3>
+        <a href="https://www.instagram.com/churchapascentar/" target="_blank">Instagram</a><br>
+        <a href="https://www.youtube.com/@churchapascentar" target="_blank">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Apascentar Church. Todos os direitos reservados.
+    </div>
+  </footer>
+
+
+  <script>
+    const form = document.getElementById('pedidoForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          formMessage.style.color = 'green';
+          formMessage.textContent = 'Pedido enviado com sucesso! Obrigado por compartilhar conosco.';
+          form.reset();
+        } else {
+          throw new Error('Erro no envio');
+        }
+      } catch (error) {
+        formMessage.style.color = 'red';
+        formMessage.textContent = 'Ops! Ocorreu um erro ao enviar seu pedido. Tente novamente mais tarde.';
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname;         // caminho da URL
+      const page = path.split("/").pop();             // pega só o nome do arquivo, ex: "pedidos.html"
+
+      document.querySelectorAll('.menu a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;                            // evita erros se algum link não tiver href
+
+        const hrefPage = href.split("/").pop();      // pega só o nome do arquivo no href
+
+        if (hrefPage === page) {
+          const li = link.parentElement;
+          li.classList.add('ativo');                  // adiciona classe ativo no li do menu
+
+          // Se for submenu, abre o menu pai também
+          const parentLi = li.closest('li');
+          if (parentLi) parentLi.classList.add('ativo');
+        }
+      });
+    });
+
+  </script>
+
+</body>
+<script src="script.js"></script>
+
+</html>

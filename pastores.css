@@ -1,0 +1,80 @@
+.pastores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+}
+
+.pastores h1 {
+  font-size: 48px;
+  margin-bottom: -20px;
+}
+
+.pastores p {
+  font-size: 20px;
+
+}
+
+.pastores-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+
+.pastores-section h1,
+.pastores-section h2 {
+  color: #2c3e50;
+}
+
+.pastores-section .intro {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.presbiterio,
+.pastores-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card-pastor {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.card-pastor:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-pastor img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-pastor .info h3 {
+  margin: 0 0 8px 0;
+  color: #342f26;
+  font-size: 1.2rem;
+}
+
+.card-pastor .info p {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+}

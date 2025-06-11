@@ -1,0 +1,80 @@
+.gc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px; /* Limita o tamanho máximo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  box-sizing: border-box;
+}
+
+.gc-box {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gc-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.gc-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.gc-text {
+  padding: 12px;
+  text-align: center;
+}
+
+.gc-text h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #333;
+
+}
+
+.gc-text p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+
+.gc-cta {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px 20px;
+  background: #fff;
+  border-top: 2px solid #eaeaea;
+}
+
+.gc-cta h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.gc-btn {
+  display: inline-block;
+  background-color: #25d366; /* Cor do WhatsApp */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.gc-btn:hover {
+  background-color: #1ebe5d;
+}

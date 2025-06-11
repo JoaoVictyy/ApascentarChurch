@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Apascentar Church</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/Apascentar.jpg" type="image/png" />
+</head>
+
+<body>
+
+
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="./img/Apascentar.jpg" alt="Apascentar Church Logo" class="logo">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="menu-toggle">QUEM SOMOS ▾</a>
+                    <ul class="submenu">
+                        <li><a href="index.html#nosso-proposito">PROPÓSITO</a></li>
+                        <li><a href="pastores.html">NOSSOS PASTORES</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu-toggle">FALE CONOSCO ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#contato" class="menu-item contato-link">CONTATO</a></li>
+                        <li><a href="pedidos.html">PEDIDOS DE ORAÇÃO</a></li>
+                    </ul>
+                </li>
+                <li><a href="agenda.html" class="menu-item">AGENDA</a></li>
+                <li><a href="gc.html" class="menu-item">GRUPO DE CRESCIMENTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="agenda-home">
+            <h2>AGENDA DE EVENTOS</h2>
+            <ul>
+                <li><strong>Domingo - 09:00h</strong> </li>
+                <li><strong>Domingo - 19:00h</strong> </li>
+                <li><strong>Quinta-feira 20:00h</strong></li>
+            </ul> <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d647.6918616226444!2d-51.137735071577445!3d-23.319442632569245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb43005341faf3%3A0x918d356839d9b014!2sApascentar%20Church!5e0!3m2!1spt-BR!2sbr!4v1749651114553!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Apascentar Church</h3>
+                <p>Conectando vidas ao amor de Deus. Venha participar dos nossos cultos!</p>
+            </div>
+            <div class="footer-section contato" id="contato">
+                <h3>Contato</h3>
+                <p>Email: tananã@apascentar.com</p>
+                <p>Telefone: (99) 99999-9999</p>
+                <p>Endereço: Avenida São João, 976 - Londrina, PR</p>
+            </div>
+            <div class="footer-section redes">
+                <h3>Siga-nos</h3>
+                <a href="https://www.instagram.com/churchapascentar/" target="_blank">Instagram</a><br>
+                <a href="https://www.youtube.com/@churchapascentar" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Apascentar Church. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.contato-link').addEventListener('click', function () {
+            const tituloContato = document.getElementById('contato');
+            if (tituloContato) {
+                tituloContato.classList.add('brilho');
+                setTimeout(() => {
+                    tituloContato.classList.remove('brilho');
+                }, 2000);
+            }
+        });
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const hash = window.location.hash;
+            if (hash === "#nosso-proposito") {
+                const elemento = document.querySelector(hash);
+                if (elemento) {
+                    const titulo = elemento.querySelector(".brilho");
+                    if (titulo) {
+                        titulo.classList.add("brilhar");
+                        setTimeout(() => titulo.classList.remove("brilhar"), 2000);
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
