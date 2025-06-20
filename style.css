@@ -470,15 +470,55 @@ html {
     color: #bfa440;
 }
 
-
-
-
-
-
 iframe {
     width: 50%;
     height: 250px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* celulares pequenos */
+@media (max-width: 480px) {
+    .carousel-button {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .carousel-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero .botao {
+        padding: 10px 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        margin-left: 0;
+    }
+
+    .menu {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
 }
