@@ -144,3 +144,8 @@ document.querySelector('.proposito-link')?.addEventListener('click', function ()
   }, 7000); // ou 3000 se quiser só 3 segundos
 });
 
+function menuOnClick() {
+  document.getElementById("menu1-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu1-bg").classList.toggle("change-bg");
+}
