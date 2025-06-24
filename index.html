@@ -7,16 +7,34 @@
     <title>Apascentar Church</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="Apascentar.jpg" type="image/png" />
+    <link rel="icon" href="./img/Apascentar.jpg" type="image/png" />
 </head>
 
 <body>
 
     <header>
         <a href="index.html" class="logo-container">
-            <img src="Apascentar.jpg" alt="Apascentar Church Logo" class="logo">
+            <img src="./img/Apascentar.jpg" alt="Apascentar Church Logo" class="logo">
         </a>
         <nav>
+            <div id="menu1">
+                <div id="menu1-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="#proposito">PROPÓSITO</a></li>
+                        <li><a href="pastores.html">NOSSOS PASTORES</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                        <li><a href="pedidos.html">PEDIDOS DE ORAÇÃO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        
+            <div class="menu-bg" id="menu-bg"></div>
             <ul class="menu">
                 <li>
                     <a href="#" class="menu-toggle">QUEM SOMOS ▾</a>
@@ -35,7 +53,7 @@
                 <li><a href="agenda.html" class="menu-item">AGENDA</a></li>
                 <li><a href="gc.html" class="menu-item">GRUPO DE CRESCIMENTO</a></li>
             </ul>
-        </nav>
+        
     </header>
 
     <main>
@@ -80,7 +98,7 @@
             <div class="footer-section contato" id="contato">
                 <h3>Contato</h3>
                 <p>Email: tananã@apascentar.com</p>
-                <p>Telefone: (99) 99999-9999</p>
+                <p>Telefone: ((43) 98845-6957</p>
                 <p>Endereço: Avenida São João, 976 - Londrina, PR</p>
             </div>
             <div class="footer-section redes">
@@ -93,7 +111,6 @@
             &copy; 2025 Apascentar Church. Todos os direitos reservados.
         </div>
     </footer>
-
 
 
 </body>
