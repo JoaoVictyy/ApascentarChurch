@@ -60,8 +60,8 @@
 }
 
 .card-pastor img {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -78,3 +78,4 @@
   color: #444;
   font-size: 1rem;
 }
+
