@@ -1,12 +1,16 @@
 .gc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
-  max-width: 1200px; /* Limita o tamanho máximo */
-  margin: 0 auto; /* Centraliza o conteúdo */
+  max-width: 1200px;
+  /* Limita o tamanho máximo */
+  margin: 0 auto;
+  /* Centraliza o conteúdo */
   box-sizing: border-box;
 }
+
+
 
 .gc-box {
   background: white;
@@ -65,7 +69,8 @@
 
 .gc-btn {
   display: inline-block;
-  background-color: #25d366; /* Cor do WhatsApp */
+  background-color: #25d366;
+  /* Cor do WhatsApp */
   color: white;
   padding: 12px 24px;
   font-size: 16px;
@@ -77,4 +82,11 @@
 
 .gc-btn:hover {
   background-color: #1ebe5d;
+}
+
+@media (max-width: 480px) {
+  .gc-grid {
+    grid-template-columns: 1fr;
+    width: 400px;
+  }
 }
